@@ -66,14 +66,14 @@ memojiView.onChange = { image, imageType in
 
 ### Demo
 <div align="center">
-<img src="./MemojiViewDemo/Preview/Demo.gif" alt="Banner" width=40%>
+<img src="./MemojiViewDemo/Preview/demo.gif" alt="demo.gif" width=40%>
 </div>
 
 #### Text input
 Like previously stated we can't really control the keyboard and therefore the input of the user.
 Simply changing the Keyboard type will lead to different results. Using the default Character Keyboard will also convert them to images.
 <div align="center">
-<img src="./MemojiViewDemo/Preview/Demo_text.gif" alt="Banner" width=40%>
+<img src="./MemojiViewDemo/Preview/demo_text.gif" alt="demo_text.gif" width=40%>
 </div>
 
 
