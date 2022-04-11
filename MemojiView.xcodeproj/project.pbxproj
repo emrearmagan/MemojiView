@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D000257428043A22005F8C34 /* LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = D000257328043A22005F8C34 /* LICENSE */; };
 		D000257B28046F54005F8C34 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D000257628046F54005F8C34 /* banner.png */; };
 		D000257C28046F54005F8C34 /* preview1.png in Resources */ = {isa = PBXBuildFile; fileRef = D000257728046F54005F8C34 /* preview1.png */; };
 		D000257D28046F54005F8C34 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D000257828046F54005F8C34 /* demo.gif */; };
@@ -291,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A4D6FA2802FA650042879B /* CircularImageView.swift in Sources */,
-				D000257428043A22005F8C34 /* LICENSE in Sources */,
 				D0A4D6F32802F8A50042879B /* Character.swift in Sources */,
 				D0A4D6F12802F86B0042879B /* String.swift in Sources */,
 				D0A4D6EE2802F7E20042879B /* MemojiTextField.swift in Sources */,
