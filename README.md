@@ -35,6 +35,17 @@ memojiView.tintColor = .purple
 self.view.addSubview(memojiView)   
 ```
 
+###### Image types
+MemojiView has 3 types of images.
+- `memoji`: Is a single Memoji image.
+- `emoji`: Is a single Emoji image.
+- `text(Int)` : Is a String converted to an image with the number of letters in it
+
+```swift
+enum ImageType: Equatable {
+    case memoji, emoji, text(Int)
+}
+```
 
 ###### Delegate
 
@@ -69,7 +80,7 @@ memojiView.onChange = { image, imageType in
 <img src="./MemojiViewDemo/Preview/demo.gif" alt="demo.gif" width=40%>
 </div>
 
-#### Text input
+###### Text input
 Like previously stated we can't really control the keyboard and therefore the input of the user.
 Simply changing the Keyboard type will lead to different results. Using the default Character Keyboard will also convert them to images.
 <div align="center">
