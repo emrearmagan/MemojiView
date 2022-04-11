@@ -14,7 +14,7 @@
 
 Since there is no official API for using the users Memoji's i have built a simple view to retrieve them and use them to your liking.
 
-WidgetView works by having a TextView behind the actual View for user input. The passed string is converted to an image and displayed in the view.
+MemojiView works by having a TextView behind the actual View for user input. The passed string is converted to an image and displayed in the view.
 That could also lead that users input character or emoji's with will also be converted to images.
 Either conform to the delegate and display a warning if the users selects anything than a memoji or simply accepts any kind of input.
 
@@ -87,12 +87,12 @@ Simply changing the Keyboard type will lead to different results. Using the defa
 
 ##### CocoaPods
 
-You can use CocoaPods to install WidgetView by adding it to your Podfile:
+You can use CocoaPods to install MemojiView by adding it to your Podfile:
 
-    pod 'WidgetView'
+    pod 'MemojiView'
 
-##### Installing WidgetView manually
-1. Download WidgetView.zip from the last release and extract its content in your project's folder.
+##### Installing MemojiView manually
+1. Download MemojiView.zip from the last release and extract its content in your project's folder.
 2. From the Xcode project, choose Add Files to ... from the File menu and add the extracted files.
 
 ### Contribute
