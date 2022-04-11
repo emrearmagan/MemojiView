@@ -11,21 +11,34 @@ import MemojiView
 class ViewController: UIViewController, MemojiViewDelegate {
     let size = CGSize(width: 180, height: 180)
     static let color = UIColor(red: 156/255, green: 130/255, blue: 255/255, alpha: 1)
+    static let defaultImage =  UIImage(named: "user.image")
     
     private let memojiView: MemojiView = {
         let view = MemojiView(frame: .zero)
-        let image = UIImage(named: "user.image")
-        view.image = image
+        view.image = ViewController.defaultImage
         view.tintColor = ViewController.color
         return view
     }()
    
+    private let miniMemojiView: MemojiView = {
+        let view = MemojiView(frame: .zero)
+        view.image = ViewController.defaultImage
+        view.backgroundColor = ViewController.color
+        view.isEditable = false
+        return view
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         memojiView.frame = CGRect(origin: CGPoint(x: self.view.center.x - (size.width / 2), y: 100), size: size) // use constraint in real project
         memojiView.delegate = self
-     
+        miniMemojiView.tintColor = ViewController.color
+        memojiView.onChange = { image, imageType in
+            self.miniMemojiView.image = image
+        }
+        
         self.view.addSubview(memojiView)
         setupView()
     }
@@ -44,7 +57,7 @@ extension ViewController {
         let rect = CGRect(origin: CGPoint(x: 0, y: 100 + size.height + 18), size: .init(width: self.view.frame.width, height: 30))
         let nameLabel = UILabel(frame: rect)
         let welcomeString = NSMutableAttributedString(string: "Welcome, ", attributes: [.font: UIFont.AvenirNext.regular(size: 20), .foregroundColor: UIColor.label])
-        let nameString = NSMutableAttributedString(string: "James 👋", attributes: [NSAttributedString.Key.font: UIFont.AvenirNext.bold(size: 20), .foregroundColor: UIColor.label])
+        let nameString = NSMutableAttributedString(string: "Emre Armagan 👋", attributes: [NSAttributedString.Key.font: UIFont.AvenirNext.bold(size: 20), .foregroundColor: UIColor.label])
         welcomeString.append(nameString)
 
         nameLabel.textAlignment = .center
@@ -83,10 +96,26 @@ extension ViewController {
             descriptionStack.addArrangedSubview(label)
         }
         
+        let rectView = CGRect(origin: CGPoint(x: descriptionStack.center.x - 100, y: descriptionStack.frame.maxY + 30), size: CGSize(width: 200, height: 200))
+        let view = UIView(frame: rectView)
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 20
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowRadius = 5.0
+        
+        miniMemojiView.frame = CGRect(origin: CGPoint(x: 50, y: 50), size: CGSize(width: 100, height: 100))
+        view.addSubview(miniMemojiView)
+        
+
         self.view.addSubview(nameLabel)
         self.view.addSubview(subtitleLabel)
         self.view.addSubview(stackView)
         self.view.addSubview(descriptionStack)
+        self.view.addSubview(view)
     }
 }
 

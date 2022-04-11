@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D000257428043A22005F8C34 /* LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = D000257328043A22005F8C34 /* LICENSE */; };
+		D000257B28046F54005F8C34 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D000257628046F54005F8C34 /* banner.png */; };
+		D000257C28046F54005F8C34 /* preview1.png in Resources */ = {isa = PBXBuildFile; fileRef = D000257728046F54005F8C34 /* preview1.png */; };
+		D000257D28046F54005F8C34 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D000257828046F54005F8C34 /* demo.gif */; };
+		D000257E28046F54005F8C34 /* preview2.png in Resources */ = {isa = PBXBuildFile; fileRef = D000257928046F54005F8C34 /* preview2.png */; };
+		D000257F28046F54005F8C34 /* demo_text.gif in Resources */ = {isa = PBXBuildFile; fileRef = D000257A28046F54005F8C34 /* demo_text.gif */; };
 		D0A4D6C6280241510042879B /* MemojiView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A4D6C5280241510042879B /* MemojiView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A4D6EE2802F7E20042879B /* MemojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D6ED2802F7E20042879B /* MemojiTextField.swift */; };
 		D0A4D6F12802F86B0042879B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D6F02802F86B0042879B /* String.swift */; };
@@ -50,6 +55,11 @@
 
 /* Begin PBXFileReference section */
 		D000257328043A22005F8C34 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D000257628046F54005F8C34 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
+		D000257728046F54005F8C34 /* preview1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview1.png; sourceTree = "<group>"; };
+		D000257828046F54005F8C34 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
+		D000257928046F54005F8C34 /* preview2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview2.png; sourceTree = "<group>"; };
+		D000257A28046F54005F8C34 /* demo_text.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo_text.gif; sourceTree = "<group>"; };
 		D0A4D6C2280241510042879B /* MemojiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MemojiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A4D6C5280241510042879B /* MemojiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemojiView.h; sourceTree = "<group>"; };
 		D0A4D6ED2802F7E20042879B /* MemojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiTextField.swift; sourceTree = "<group>"; };
@@ -86,6 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D000257528046F43005F8C34 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				D000257628046F54005F8C34 /* banner.png */,
+				D000257A28046F54005F8C34 /* demo_text.gif */,
+				D000257828046F54005F8C34 /* demo.gif */,
+				D000257728046F54005F8C34 /* preview1.png */,
+				D000257928046F54005F8C34 /* preview2.png */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		D0A4D6B8280241510042879B = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +159,7 @@
 		D0A4D70A2802FDF30042879B /* MemojiViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D000257528046F43005F8C34 /* Preview */,
 				D0A4D70B2802FDF30042879B /* AppDelegate.swift */,
 				D0A4D70D2802FDF30042879B /* SceneDelegate.swift */,
 				D0A4D70F2802FDF30042879B /* ViewController.swift */,
@@ -250,8 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A4D7182802FDFC0042879B /* LaunchScreen.storyboard in Resources */,
+				D000257D28046F54005F8C34 /* demo.gif in Resources */,
+				D000257F28046F54005F8C34 /* demo_text.gif in Resources */,
 				D0A4D7152802FDFC0042879B /* Assets.xcassets in Resources */,
+				D000257C28046F54005F8C34 /* preview1.png in Resources */,
 				D0A4D7132802FDF30042879B /* Main.storyboard in Resources */,
+				D000257E28046F54005F8C34 /* preview2.png in Resources */,
+				D000257B28046F54005F8C34 /* banner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
