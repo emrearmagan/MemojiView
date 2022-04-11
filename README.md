@@ -20,9 +20,9 @@ Either conform to the delegate and display a warning if the users selects anythi
 
 ### Quick start
 <br>
-<div style="display: flex; align-items: center; margin-inline: 10%">
+<div>
   <img width="30%" src="./MemojiViewDemo/Preview/preview1.png" alt="preview1">
-  <div style="width:40%;height:100px;"></div>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="30%" src="./MemojiViewDemo/Preview/preview2.png" alt="preview2">
 </div>
 
