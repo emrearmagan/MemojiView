@@ -39,6 +39,9 @@ class MemojiTextField: UITextView {
     /// Flag indicating if the textfield should become first responder. Helper to switch between opening and closing the keyboard on tap
     private var becomeFirstResponder = false
     
+    /// The maximum number of letter allowed for text
+    public var maxLetters: Int = 2
+    
     //MARK: Lifecycle
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
@@ -115,7 +118,7 @@ extension MemojiTextField: UITextViewDelegate {
             textView.text = ""
         }
         
-        return textView.text.utf16.count + text.utf16.count <= 2
+        return textView.text.utf16.count + text.utf16.count <= maxLetters
     }
     
     
@@ -136,6 +139,7 @@ extension MemojiTextField: UITextViewDelegate {
             return
         }
 
+        let counter = text.count
         //add padding for single letter otherwise it does not fit properly and looks weird
         if text.count == 1 && !text.isSingleEmoji {
             text = " \(text) "
@@ -143,6 +147,6 @@ extension MemojiTextField: UITextViewDelegate {
         textView.textColor = .clear
         
         let image = text.toImage()
-        emojiDelegate?.didUpdateEmoji(emoji: image, type: text.isSingleEmoji ? .emoji : .text(text.count))
+        emojiDelegate?.didUpdateEmoji(emoji: image, type: text.isSingleEmoji ? .emoji : .text(counter))
     }
 }
