@@ -106,6 +106,10 @@ extension MemojiTextField: UITextViewDelegate {
             return false
         }
         
+      if text == "" {
+            emojiDelegate?.didUpdateEmoji(emoji: UIImage(), type: .text(0))
+        }
+     
         if text.isSingleEmoji {
             guard textView.text == text else {
                 textView.text = ""
