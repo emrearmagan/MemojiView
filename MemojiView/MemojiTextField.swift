@@ -31,7 +31,7 @@ class MemojiTextField: UITextView {
     //TODO: Opening the emoji keyboard causes some warning. 
     /// Opens the keyboard with the emoji field
     override var textInputMode: UITextInputMode? {
-        .activeInputModes.first(where: { $0.primaryLanguage == "emoji" })
+       UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == "emoji" })
     }
     /// required for iOS 13. Return a non-nil to show the Emoji keyboard
     override var textInputContextIdentifier: String? { "" }
@@ -106,6 +106,10 @@ extension MemojiTextField: UITextViewDelegate {
             return false
         }
         
+      if text == "" {
+            emojiDelegate?.didUpdateEmoji(emoji: UIImage(), type: .text(0))
+        }
+     
         if text.isSingleEmoji {
             guard textView.text == text else {
                 textView.text = ""
