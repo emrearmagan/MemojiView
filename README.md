@@ -108,6 +108,34 @@ Simply changing the Keyboard type will lead to different results. Using the defa
 <img src="./MemojiViewDemo/Preview/demo_text.gif" alt="demo_text.gif" width=40%>
 </div>
 
+Apple does not provide an official way to programmatically force the Emoji Keyboard. However, you can detect when the user changes the keyboard type and react accordingly. This can be particularly useful if you want to take action when the Emoji Keyboard loses focues if the user switches back to another input mode.
+The following example demonstrates how to listen for keyboard input mode changes and react only when the input mode changes:
+
+```swift
+NotificationCenter.default.addObserver(
+    self,
+    selector: #selector(inputModeDidChange),
+    name: UITextInputMode.currentInputModeDidChangeNotification,
+    object: nil
+)
+
+@objc func inputModeDidChange(_ notification: Notification) {
+    // Attempt to retrieve the new input mode
+    guard let currentInputMode = notification.userInfo?["UITextInputFromInputModeKey"] as? UITextInputMode else {
+        print("Unable to detect the current input mode.")
+        return
+    }
+
+    switch currentInputMode.primaryLanguage {
+    case "emoji":
+        print("Emoji keyboard was active! Handle accordingly.")
+    default:
+        print("Keyboard type changed to: \(currentInputMode.primaryLanguage ?? "unknown")")
+    }
+}
+
+```
+
 
 ### Requirements
 - Xcode 11
