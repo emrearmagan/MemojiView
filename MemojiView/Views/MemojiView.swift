@@ -17,9 +17,9 @@ public protocol MemojiViewDelegate: AnyObject {
 }
 
 /// A customizable view that displays an emoji, memoji, or text converted to an image.
-/// - Supports editable text input with `MemojiTextField`.
+/// - Supports editable text input with `MemojiTextView`.
 /// - Displays updates via an `UIImageView`.
-open class MemojiView: UIView, MemojiTextFieldDelegate {
+open class MemojiView: UIView, MemojiTextViewDelegate {
     // MARK: Properties
 
     /// Delegate to notify when the image is updated.
@@ -44,14 +44,14 @@ open class MemojiView: UIView, MemojiTextFieldDelegate {
 
     /// The maximum number of characters allowed for input.
     public var maxLetters: Int {
-        get { memojiView.memojiTextField.maxLetters }
-        set { memojiView.memojiTextField.maxLetters = newValue }
+        get { memojiView.memojiTextView.maxLetters }
+        set { memojiView.memojiTextView.maxLetters = newValue }
     }
 
     /// The color of the input text.
     public var textColor: UIColor? {
-        get { memojiView.memojiTextField.textColor }
-        set { memojiView.memojiTextField.textColor = newValue }
+        get { memojiView.memojiTextView.textColor }
+        set { memojiView.memojiTextView.textColor = newValue }
     }
 
     /// ImageView to display the emoji, memoji, or text image.
@@ -61,8 +61,8 @@ open class MemojiView: UIView, MemojiTextFieldDelegate {
         return imageView
     }()
 
-    /// Wrapper for `MemojiTextField` to manage input and interactions.
-    private var memojiView = MemojiTextFieldWrapper()
+    /// Wrapper for `MemojiTextView` to manage input and interactions.
+    private var memojiView = MemojiTextViewWrapper()
 
     // MARK: Lifecycle
 
@@ -80,7 +80,7 @@ open class MemojiView: UIView, MemojiTextFieldDelegate {
 
     private func commonInit() {
         backgroundColor = .clear
-        memojiView.memojiTextField.emojiDelegate = self
+        memojiView.memojiTextView.emojiDelegate = self
         _setupUI()
     }
 
@@ -112,7 +112,7 @@ open class MemojiView: UIView, MemojiTextFieldDelegate {
         ])
     }
 
-    // MARK: - MemojiTextFieldDelegate
+    // MARK: - MemojiTextViewDelegate
 
     /// Called when the emoji or image is updated.
     /// - Override to customize behavior.

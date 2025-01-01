@@ -1,5 +1,5 @@
 //
-//  MemojiTextFieldWrapper.swift
+//  MemojiTextViewWrapper.swift
 //  MemojiView
 //
 //  Created by Emre Armagan on 01.01.25.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-/// A wrapper for `MemojiTextField` to manage interaction and UI behavior.
+/// A wrapper for `MemojiTextView` to manage interaction and UI behavior.
 /// - The wrapper ensures that no direct interaction with the text field happens (e.g., no context menus for copy, paste, cut).
 /// - The wrapper also centralizes keyboard management by intercepting tap gestures and controlling the first responder state.
-open class MemojiTextFieldWrapper: UIView {
+open class MemojiTextViewWrapper: UIView {
     // MARK: Properties
 
-    let memojiTextField = MemojiTextField()
+    let memojiTextView = MemojiTextView()
 
     // MARK: Init
 
@@ -31,27 +31,27 @@ open class MemojiTextFieldWrapper: UIView {
     // MARK: Methods
 
     @objc func didTapView() {
-        guard !memojiTextField.isFirstResponder else {
-            memojiTextField.resignFirstResponder()
+        guard !memojiTextView.isFirstResponder else {
+            memojiTextView.resignFirstResponder()
             return
         }
 
-        memojiTextField.becomeFirstResponder()
+        memojiTextView.becomeFirstResponder()
     }
 
     private func commonInit() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapView))
         addGestureRecognizer(tap)
-        memojiTextField.isUserInteractionEnabled = false
+        memojiTextView.isUserInteractionEnabled = false
 
-        addSubview(memojiTextField)
-        memojiTextField.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(memojiTextView)
+        memojiTextView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            memojiTextField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            memojiTextField.trailingAnchor.constraint(equalTo: trailingAnchor),
-            memojiTextField.topAnchor.constraint(equalTo: topAnchor),
-            memojiTextField.bottomAnchor.constraint(equalTo: bottomAnchor)
+            memojiTextView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            memojiTextView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            memojiTextView.topAnchor.constraint(equalTo: topAnchor),
+            memojiTextView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Enum representing the types of images that can be produced by the `MemojiTextField`.
+/// Enum representing the types of images that can be produced by the `MemojiTextView`.
 public enum MemojiImageType: Equatable {
     /// - `memoji`: Represents a memoji image.
     case memoji

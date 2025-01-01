@@ -1,5 +1,5 @@
 //
-//  MemojiTextField.swift
+//  MemojiTextView.swift
 //  MemojiView
 //
 //  Created by Emre Armagan on 10.04.22.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-/// The delegate protocol for `MemojiTextField`
+/// The delegate protocol for `MemojiTextView`
 /// This allows communication between the text field and its parent components regarding changes or updates in the selected content.
-protocol MemojiTextFieldDelegate: AnyObject {
+protocol MemojiTextViewDelegate: AnyObject {
     /// Called whenever the text field updates its displayed content.
     /// - Parameters:
     ///   - emoji: The resulting image, which could represent a memoji, emoji, or a text-to-image conversion.
@@ -23,9 +23,9 @@ protocol MemojiTextFieldDelegate: AnyObject {
 ///   - Converts text or emojis into images.
 ///   - Supports a maximum number of characters for text input.
 ///   - Communicates updates through a delegate.
-class MemojiTextField: UITextView {
+class MemojiTextView: UITextView {
     /// Delegate to notify about updates in the text field.
-    weak var emojiDelegate: MemojiTextFieldDelegate?
+    weak var emojiDelegate: MemojiTextViewDelegate?
 
     /// Maximum number of characters allowed in the text field.
     var maxLetters: Int = 2
@@ -33,7 +33,11 @@ class MemojiTextField: UITextView {
     // TODO: Emits warnings on iOS 13 when opening the emoji keyboard.
     /// Opens the emoji keyboard when the text field becomes active.
     override public var textInputMode: UITextInputMode? {
-        return .activeInputModes.first(where: { $0.primaryLanguage == "emoji" })
+        if let emojiKeyboard = UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == "emoji" }) {
+            return emojiKeyboard
+        }
+
+        return super.textInputMode
     }
 
     /// Required for iOS 13 to show the emoji keyboard. Returns a non-nil identifier.
@@ -161,7 +165,9 @@ class MemojiTextField: UITextView {
     }
 }
 
-extension MemojiTextField {
+// MARK: Helper
+
+extension MemojiTextView {
     /// Finds the first attachment in the attributed text, including adaptive image glyphs for iOS 18.
     /// - Parameter attributedText: The attributed text to search.
     /// - Returns: The first `NSTextAttachment` found, or `nil`.
@@ -200,7 +206,7 @@ extension MemojiTextField {
 
 // MARK: - UITextFieldDelegate
 
-extension MemojiTextField: UITextViewDelegate {
+extension MemojiTextView: UITextViewDelegate {
     /// Validates and processes text input changes.
     func textView(_ textView: UITextView, shouldChangeTextIn _: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
