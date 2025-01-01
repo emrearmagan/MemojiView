@@ -39,11 +39,13 @@ self.view.addSubview(memojiView)
 MemojiView has 3 types of images.
 - `memoji`: Is a single Memoji image.
 - `emoji`: Is a single Emoji image.
-- `text(Int)` : Is a String converted to an image with the number of letters in it
+- `text(Int)` : A string converted into an image, including the character count and the actual text
 
 ```swift
-enum ImageType: Equatable {
-    case memoji, emoji, text(Int)
+enum MemojiImageType: Equatable {
+    case memoji
+    case emoji
+    case text(Int)
 }
 ```
 
@@ -61,7 +63,7 @@ class MyViewController: UIViewController, MemojiViewDelegate {
   }
 
   // MemojiView delegate
- func didUpdateImage(image: UIImage, type: ImageType) {
+ func didUpdateImage(image: UIImage?, type: ImageType) {
     // Do something with the image or check the type of the image and respond accordingly.
  }
 }
@@ -75,6 +77,25 @@ memojiView.onChange = { image, imageType in
 }
 ```
 
+###### Create your own
+
+You can subclass MemojiView to add or override subviews. For example, to replace the default UIImageView:
+```swift
+class CustomMemojiView: MemojiView {
+    override func setupUI() {
+        let customLabel = UILabel()
+        customLabel.text = "Custom Memoji View"
+        customLabel.textAlignment = .center
+        customLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(customLabel)
+
+        NSLayoutConstraint.activate([
+            customLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            customLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+        ])
+    }
+}
+```
 ### Demo
 <div align="center">
 <img src="./MemojiViewDemo/Preview/demo.gif" alt="demo.gif" width=40%>
@@ -95,6 +116,13 @@ Simply changing the Keyboard type will lead to different results. Using the defa
 
 
 ### Installation
+##### Swift Package Manager
+To integrate `MemojiView` into your project using Swift Package Manager, add the following to your Package.swift file:
+```swift
+dependencies: [
+    .package(url: "https://github.com/emrearmagan/ModalKit.git", from: "0.0.2")
+]
+```
 
 ##### CocoaPods
 
