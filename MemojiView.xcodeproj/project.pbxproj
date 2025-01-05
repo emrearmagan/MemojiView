@@ -19,7 +19,7 @@
 		D0A4D6F52802F91E0042879B /* MemojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D6F42802F91E0042879B /* MemojiView.swift */; };
 		D0A4D70C2802FDF30042879B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D70B2802FDF30042879B /* AppDelegate.swift */; };
 		D0A4D70E2802FDF30042879B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D70D2802FDF30042879B /* SceneDelegate.swift */; };
-		D0A4D7102802FDF30042879B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D70F2802FDF30042879B /* ViewController.swift */; };
+		D0A4D7102802FDF30042879B /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4D70F2802FDF30042879B /* ExampleViewController.swift */; };
 		D0A4D7132802FDF30042879B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A4D7112802FDF30042879B /* Main.storyboard */; };
 		D0A4D7152802FDFC0042879B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A4D7142802FDFC0042879B /* Assets.xcassets */; };
 		D0A4D7182802FDFC0042879B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A4D7162802FDFC0042879B /* LaunchScreen.storyboard */; };
@@ -27,6 +27,9 @@
 		D0A4D71E2802FE180042879B /* MemojiView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0A4D6C2280241510042879B /* MemojiView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0D48F752D252AF100E33F79 /* MemojiTextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D48F742D252AF000E33F79 /* MemojiTextViewWrapper.swift */; };
 		D0D48F772D252B2900E33F79 /* MemojiImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D48F762D252B1E00E33F79 /* MemojiImageType.swift */; };
+		D0E5A9AB2D2AB61900A4B29F /* MemojiViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5A9AA2D2AB61000A4B29F /* MemojiViewRepresentable.swift */; };
+		D0E5A9CC2D2AB8C700A4B29F /* MemojiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5A9CB2D2AB8BE00A4B29F /* MemojiContentView.swift */; };
+		D0E5A9CE2D2AB94A00A4B29F /* SwiftUIExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5A9CD2D2AB94100A4B29F /* SwiftUIExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +72,7 @@
 		D0A4D7092802FDF30042879B /* MemojiViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemojiViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A4D70B2802FDF30042879B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A4D70D2802FDF30042879B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0A4D70F2802FDF30042879B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0A4D70F2802FDF30042879B /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		D0A4D7122802FDF30042879B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0A4D7142802FDFC0042879B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A4D7172802FDFC0042879B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +80,9 @@
 		D0D48F742D252AF000E33F79 /* MemojiTextViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiTextViewWrapper.swift; sourceTree = "<group>"; };
 		D0D48F762D252B1E00E33F79 /* MemojiImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiImageType.swift; sourceTree = "<group>"; };
 		D0D48F9A2D255D2400E33F79 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		D0E5A9AA2D2AB61000A4B29F /* MemojiViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiViewRepresentable.swift; sourceTree = "<group>"; };
+		D0E5A9CB2D2AB8BE00A4B29F /* MemojiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiContentView.swift; sourceTree = "<group>"; };
+		D0E5A9CD2D2AB94100A4B29F /* SwiftUIExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +140,11 @@
 		D0A4D6C4280241510042879B /* MemojiView */ = {
 			isa = PBXGroup;
 			children = (
-				D0D48F782D252B2C00E33F79 /* Models */,
-				D0D48F732D252AD200E33F79 /* Views */,
+				D0D48F742D252AF000E33F79 /* MemojiTextViewWrapper.swift */,
+				D0A4D6ED2802F7E20042879B /* MemojiTextView.swift */,
+				D0D48F762D252B1E00E33F79 /* MemojiImageType.swift */,
+				D0A4D6F42802F91E0042879B /* MemojiView.swift */,
+				D0E5A9A92D2AB60300A4B29F /* SwiftUI */,
 				D0A4D6EF2802F8540042879B /* Extension */,
 				D0A4D6C5280241510042879B /* MemojiView.h */,
 			);
@@ -161,10 +170,11 @@
 		D0A4D70A2802FDF30042879B /* MemojiViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D000257528046F43005F8C34 /* Preview */,
 				D0A4D70B2802FDF30042879B /* AppDelegate.swift */,
 				D0A4D70D2802FDF30042879B /* SceneDelegate.swift */,
-				D0A4D70F2802FDF30042879B /* ViewController.swift */,
+				D0A4D70F2802FDF30042879B /* ExampleViewController.swift */,
+				D0E5A9CA2D2AB8B800A4B29F /* SwiftUI */,
+				D000257528046F43005F8C34 /* Preview */,
 				D0A4D7112802FDF30042879B /* Main.storyboard */,
 				D0A4D7142802FDFC0042879B /* Assets.xcassets */,
 				D0A4D7162802FDFC0042879B /* LaunchScreen.storyboard */,
@@ -173,22 +183,21 @@
 			path = MemojiViewDemo;
 			sourceTree = "<group>";
 		};
-		D0D48F732D252AD200E33F79 /* Views */ = {
+		D0E5A9A92D2AB60300A4B29F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				D0D48F742D252AF000E33F79 /* MemojiTextViewWrapper.swift */,
-				D0A4D6ED2802F7E20042879B /* MemojiTextView.swift */,
-				D0A4D6F42802F91E0042879B /* MemojiView.swift */,
+				D0E5A9AA2D2AB61000A4B29F /* MemojiViewRepresentable.swift */,
 			);
-			path = Views;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		D0D48F782D252B2C00E33F79 /* Models */ = {
+		D0E5A9CA2D2AB8B800A4B29F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				D0D48F762D252B1E00E33F79 /* MemojiImageType.swift */,
+				D0E5A9CD2D2AB94100A4B29F /* SwiftUIExampleViewController.swift */,
+				D0E5A9CB2D2AB8BE00A4B29F /* MemojiContentView.swift */,
 			);
-			path = Models;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +321,7 @@
 			files = (
 				D0A4D6F32802F8A50042879B /* Character.swift in Sources */,
 				D0A4D6F12802F86B0042879B /* String.swift in Sources */,
+				D0E5A9AB2D2AB61900A4B29F /* MemojiViewRepresentable.swift in Sources */,
 				D0D48F752D252AF100E33F79 /* MemojiTextViewWrapper.swift in Sources */,
 				D0A4D6EE2802F7E20042879B /* MemojiTextView.swift in Sources */,
 				D0D48F772D252B2900E33F79 /* MemojiImageType.swift in Sources */,
@@ -323,7 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A4D7102802FDF30042879B /* ViewController.swift in Sources */,
+				D0E5A9CE2D2AB94A00A4B29F /* SwiftUIExampleViewController.swift in Sources */,
+				D0A4D7102802FDF30042879B /* ExampleViewController.swift in Sources */,
+				D0E5A9CC2D2AB8C700A4B29F /* MemojiContentView.swift in Sources */,
 				D0A4D70C2802FDF30042879B /* AppDelegate.swift in Sources */,
 				D0A4D70E2802FDF30042879B /* SceneDelegate.swift in Sources */,
 			);
