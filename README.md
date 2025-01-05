@@ -18,6 +18,8 @@ MemojiView works by having a TextView behind the actual View for user input. The
 That could also lead that users input character or emoji's with will also be converted to images.
 Either conform to the delegate and display a warning if the users selects anything than a memoji or simply accepts any kind of input.
 
+[📖 Documentation](https://emrearmagan.github.io/MemojiView/)
+
 ### Quick start
 <br>
 <div>
