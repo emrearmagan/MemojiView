@@ -13,7 +13,7 @@ public protocol MemojiViewDelegate: AnyObject {
     /// - Parameters:
     ///   - image: The updated image, which can be a memoji, emoji, or text-based image.
     ///   - type: The type of the updated image (`MemojiImageType`).
-    func didUpdateImage(image: UIImage?, type: MemojiImageType)
+    @MainActor func didUpdateImage(image: UIImage?, type: MemojiImageType)
 }
 
 /// A customizable view that displays an emoji, memoji, or text converted to an image.
@@ -121,7 +121,7 @@ open class MemojiView: UIView, MemojiTextViewDelegate {
     ///   - type: The type of the updated image (`MemojiImageType`).
     open func emojiChanged(emoji: UIImage?, type: MemojiImageType) {
         image = emoji
-        delegate?.didUpdateImage(image: image, type: type)
+        delegate?.didUpdateImage(image: emoji, type: type)
         onChange?(image, type)
     }
 }

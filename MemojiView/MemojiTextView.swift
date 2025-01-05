@@ -14,7 +14,7 @@ protocol MemojiTextViewDelegate: AnyObject {
     /// - Parameters:
     ///   - emoji: The resulting image, which could represent a memoji, emoji, or a text-to-image conversion.
     ///   - type: The type of the resulting image (memoji, emoji, or text-based).
-    func emojiChanged(emoji: UIImage?, type: MemojiImageType)
+    @MainActor func emojiChanged(emoji: UIImage?, type: MemojiImageType)
 }
 
 /// A custom UITextView subclass for handling memojis, emojis, and text-to-image conversions.

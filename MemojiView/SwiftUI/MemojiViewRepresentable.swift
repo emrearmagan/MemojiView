@@ -94,12 +94,10 @@ public struct MemojiViewRepresentable: UIViewRepresentable {
             self.parent = parent
         }
 
-        public func didUpdateImage(image: UIImage?, type: MemojiImageType) {
-            DispatchQueue.main.async {
-                self.parent.image = image
-                self.parent.memojiType = type
-                self.parent.onChange?(image, type)
-            }
+        @MainActor public func didUpdateImage(image: UIImage?, type: MemojiImageType) {
+            parent.image = image
+            parent.memojiType = type
+            parent.onChange?(image, type)
         }
     }
 }
