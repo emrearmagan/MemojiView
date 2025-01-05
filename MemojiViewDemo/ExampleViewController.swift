@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExampleViewController.swift
 //  MemojiViewDemo
 //
 //  Created by Emre Armagan on 10.04.22.
@@ -8,22 +8,22 @@
 import MemojiView
 import UIKit
 
-class ViewController: UIViewController, MemojiViewDelegate {
+class ExampleViewController: UIViewController, MemojiViewDelegate {
     let size = CGSize(width: 180, height: 180)
     static let color = UIColor(red: 156 / 255, green: 130 / 255, blue: 255 / 255, alpha: 1)
     static let defaultImage = UIImage(named: "user.image")
 
     private let memojiView: MemojiView = {
         let view = MemojiView(frame: .zero)
-        view.image = ViewController.defaultImage
-        view.backgroundColor = ViewController.color.withAlphaComponent(0.4)
+        view.image = ExampleViewController.defaultImage
+        view.backgroundColor = ExampleViewController.color.withAlphaComponent(0.4)
         return view
     }()
 
     private let miniMemojiView: MemojiView = {
         let view = MemojiView(frame: .zero)
-        view.image = ViewController.defaultImage
-        view.backgroundColor = ViewController.color
+        view.image = ExampleViewController.defaultImage
+        view.backgroundColor = ExampleViewController.color
         view.isEditable = false
         return view
     }()
@@ -48,12 +48,19 @@ class ViewController: UIViewController, MemojiViewDelegate {
         let padding: CGFloat = (type == .memoji) ? 15 : 35
         memojiView.layoutMargins = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
     }
+
+    @objc private func showSwiftUIExample() {
+        navigationController?.pushViewController(SwiftUIExampleViewController(), animated: true)
+    }
 }
 
 // MARK: - UI
 
-extension ViewController {
+extension ExampleViewController {
     private func setupView() {
+        title = "MemojiView"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SwiftUI", style: .done, target: self, action: #selector(showSwiftUIExample))
+
         // Adding some content to view for demonstration purposes
         let rect = CGRect(origin: CGPoint(x: 0, y: 100 + size.height + 18), size: .init(width: view.frame.width, height: 30))
         let nameLabel = UILabel(frame: rect)
