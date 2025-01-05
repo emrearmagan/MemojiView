@@ -138,6 +138,44 @@ NotificationCenter.default.addObserver(
 
 ```
 
+### SwiftUI Support
+
+Starting from iOS 13, `MemojiView` includes support for SwiftUI through the `MemojiViewRepresentable`. This allows you to integrate MemojiView into your SwiftUI projects.
+
+#### Usage (iOS 13+)
+
+```swift
+import SwiftUI
+import MemojiView
+
+struct ContentView: View {
+    @State private var displayedImage: UIImage?
+    @State private var displayedType: MemojiImageType?
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Memoji Editor").font(.headline)
+
+            MemojiViewRepresentable(
+                image: $displayedImage,
+                memojiType: $displayedType,
+                isEditable: .constant(true),
+                maxLetters: 10,
+                textColor: .blue
+            ) { updatedImage, updatedType in
+                print("Updated image: \(updatedImage?.description ?? "nil")")
+                print("Updated type: \(updatedType)")
+            }
+            .frame(height: 200)
+            .border(Color.gray, width: 1)
+        }
+        .padding()
+    }
+}
+```
+
+#### Usage (iOS 12)
+For projects targeting iOS 12, the SwiftUI-Support is currently not available. However, you can create a UIKit-compatible wrapper similar to MemojiViewRepresentable. Instead of using bindings, you can rely on closures to handle updates.
 
 ### Requirements
 - Xcode 11
