@@ -32,10 +32,10 @@ jobs:
         uses: actions/configure-pages@v4
         with:
           enablement: true
-      - name: Select Xcode 16.0
+      - name: Select Xcode 16.1
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.0.0'
+          xcode-version: '16.1.0'
       - name: Verify Swift Version
         run: swift --version
         
