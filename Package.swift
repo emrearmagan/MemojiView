@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "MemojiView",
             dependencies: [],
-            path: "MemojiView"
+            path: "Sources"
         )
     ],
     swiftLanguageVersions: [.v5]
