@@ -9,7 +9,7 @@
 <div>
 <br>
 <div align="center">
-<img src="./MemojiViewDemo/Preview/banner.png" alt="Banner" width=90%>
+<img src="./Example/Supporting Files/Preview/banner.png" alt="Banner" width=90%>
 </div>
 
 Since there is no official API for using the users Memoji's i have built a simple view to retrieve them and use them to your liking.
@@ -23,9 +23,9 @@ Either conform to the delegate and display a warning if the users selects anythi
 ### Quick start
 <br>
 <div>
-  <img width="30%" src="./MemojiViewDemo/Preview/preview1.png" alt="preview1">
+  <img width="30%" src="./Example/Supporting Files/Preview/preview1.png" alt="preview1">
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img width="30%" src="./MemojiViewDemo/Preview/preview2.png" alt="preview2">
+  <img width="30%" src="./Example/Supporting Files/Preview/preview2.png" alt="preview2">
 </div>
 
 ###### MemojiView
@@ -100,14 +100,14 @@ class CustomMemojiView: MemojiView {
 ```
 ### Demo
 <div align="center">
-<img src="./MemojiViewDemo/Preview/demo.gif" alt="demo.gif" width=40%>
+<img src="./Example/Supporting Files/Preview/demo.gif" alt="demo.gif" width=40%>
 </div>
 
 ###### Text input
 Like previously stated we can't really control the keyboard and therefore the input of the user.
 Simply changing the Keyboard type will lead to different results. Using the default Character Keyboard will also convert them to images.
 <div align="center">
-<img src="./MemojiViewDemo/Preview/demo_text.gif" alt="demo_text.gif" width=40%>
+<img src="./Example/Supporting Files/Preview/demo_text.gif" alt="demo_text.gif" width=40%>
 </div>
 
 Apple does not provide an official way to programmatically force the Emoji Keyboard. However, you can detect when the user changes the keyboard type and react accordingly. This can be particularly useful if you want to take action when the Emoji Keyboard loses focues if the user switches back to another input mode.
@@ -193,6 +193,9 @@ dependencies: [
 ```
 
 ##### CocoaPods
+
+> **⚠️ Caution**  
+> CocoaPods support has been dropped with version 0.0.4 Prior to that, support will not be existing. Using SPM is highly recommended.
 
 You can use CocoaPods to install MemojiView by adding it to your Podfile:
 
