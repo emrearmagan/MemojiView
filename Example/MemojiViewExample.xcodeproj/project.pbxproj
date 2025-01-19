@@ -12,18 +12,14 @@
 		D0E8CCA72D33E5D10084F5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8CC912D33E5D10084F5CA /* AppDelegate.swift */; };
 		D0E8CCA82D33E5D10084F5CA /* MemojiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8CCA12D33E5D10084F5CA /* MemojiContentView.swift */; };
 		D0E8CCA92D33E5D10084F5CA /* SwiftUIExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8CCA22D33E5D10084F5CA /* SwiftUIExampleViewController.swift */; };
-		D0E8CCAA2D33E5D10084F5CA /* preview2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC9E2D33E5D10084F5CA /* preview2.png */; };
-		D0E8CCAB2D33E5D10084F5CA /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC9B2D33E5D10084F5CA /* demo.gif */; };
-		D0E8CCAC2D33E5D10084F5CA /* demo_text.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC9C2D33E5D10084F5CA /* demo_text.gif */; };
-		D0E8CCAD2D33E5D10084F5CA /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC9A2D33E5D10084F5CA /* banner.png */; };
 		D0E8CCAE2D33E5D10084F5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC962D33E5D10084F5CA /* Main.storyboard */; };
 		D0E8CCAF2D33E5D10084F5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC922D33E5D10084F5CA /* Assets.xcassets */; };
-		D0E8CCB02D33E5D10084F5CA /* preview1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC9D2D33E5D10084F5CA /* preview1.png */; };
 		D0E8CCB22D33E5D10084F5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E8CC942D33E5D10084F5CA /* LaunchScreen.storyboard */; };
 		D0E8CCBB2D33F17A0084F5CA /* MemojiView in Frameworks */ = {isa = PBXBuildFile; productRef = D0E8CCBA2D33F17A0084F5CA /* MemojiView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00B96542D3C898E00D070EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E8CC792D33E5A40084F5CA /* MemojiViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemojiViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E8CC912D33E5D10084F5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E8CC922D33E5D10084F5CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,27 +36,6 @@
 		D0E8CCA22D33E5D10084F5CA /* SwiftUIExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D0E8CCB82D33F1350084F5CA /* Exceptions for "Supporting Files" folder in "MemojiViewExample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = D0E8CC782D33E5A40084F5CA /* MemojiViewExample */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D0E8CCB32D33E6080084F5CA /* Supporting Files */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				D0E8CCB82D33F1350084F5CA /* Exceptions for "Supporting Files" folder in "MemojiViewExample" target */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		D0E8CC762D33E5A40084F5CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -73,13 +48,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00B96552D3C898E00D070EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00B96542D3C898E00D070EB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0E8CC702D33E5A30084F5CA = {
 			isa = PBXGroup;
 			children = (
 				D0E8CC912D33E5D10084F5CA /* AppDelegate.swift */,
 				D0E8CCA02D33E5D10084F5CA /* SceneDelegate.swift */,
+				D00B96552D3C898E00D070EB /* Supporting Files */,
 				D0E8CCB42D33E6140084F5CA /* Resources */,
-				D0E8CCB32D33E6080084F5CA /* Supporting Files */,
 				D0E8CCB52D33E63E0084F5CA /* ViewController */,
 				D0E8CC7A2D33E5A40084F5CA /* Products */,
 			);
@@ -157,9 +140,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				D0E8CCB32D33E6080084F5CA /* Supporting Files */,
-			);
 			name = MemojiViewExample;
 			packageProductDependencies = (
 				D0E8CCBA2D33F17A0084F5CA /* MemojiView */,
@@ -210,13 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E8CCAA2D33E5D10084F5CA /* preview2.png in Resources */,
-				D0E8CCAB2D33E5D10084F5CA /* demo.gif in Resources */,
-				D0E8CCAC2D33E5D10084F5CA /* demo_text.gif in Resources */,
-				D0E8CCAD2D33E5D10084F5CA /* banner.png in Resources */,
 				D0E8CCAE2D33E5D10084F5CA /* Main.storyboard in Resources */,
 				D0E8CCAF2D33E5D10084F5CA /* Assets.xcassets in Resources */,
-				D0E8CCB02D33E5D10084F5CA /* preview1.png in Resources */,
 				D0E8CCB22D33E5D10084F5CA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +248,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,7 +257,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emrearmagan.MemojiViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,6 +277,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emrearmagan.MemojiViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
