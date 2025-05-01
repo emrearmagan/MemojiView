@@ -64,10 +64,10 @@ jobs:
           echo "<script>window.location.href += \"/documentation/${lowerCaseScheme}\"</script>" > docs/index.html;
           
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload only docs directory
           path: 'docs'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
